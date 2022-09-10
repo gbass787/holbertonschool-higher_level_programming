@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-for count in range(100):
-    if count != 99:
-        print("{0:02d}".format(count), end=", ")
-    elif count == 99:
-        print("{:d}".format(count))i
+for i in range(0, 100):
+    if ((i < 10) or (i >= 10)) and (i != 99):
+        print("{0:0=2d}".format(i), end=", ")
+    elif i == 99:
+        print("{0:0=2d}".format(i))
