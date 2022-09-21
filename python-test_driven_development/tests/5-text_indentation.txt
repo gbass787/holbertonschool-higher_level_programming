@@ -1,0 +1,35 @@
+Test file for 5-text_indentation.py.
+
+5-text_indentation.py contains:
+
+text-indentaation(text): Function prints the given text, but does 2 new lines
+	after each of these characters: . : ?. No lines start or end with a space
+-----------------------------------------------------------------------------
+
+>>> text = __import__('5-text_indentation').text_indentation
+
+
+>>> text("Hello. My name is: Gerardo. Yours?")
+Hello.
+<BLANKLINE>
+My name is:
+<BLANKLINE>
+Gerardo.
+<BLANKLINE>
+Yours?
+<BLANKLINE>
+
+>>> text(None)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text(3)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text()
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
