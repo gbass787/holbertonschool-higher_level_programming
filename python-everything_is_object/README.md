@@ -1,0 +1,1 @@
+readme for python-everything_is_object
