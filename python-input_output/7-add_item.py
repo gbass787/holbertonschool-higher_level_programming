@@ -1,16 +1,19 @@
 #!/usr/bin/python3
-'''comments'''
+'''adds all argument'''
 
 
-import sys
 import json
+import sys
+save = __import__('5-save_to_json_file').save_to_json_file
+load = __import__('6-load_from_json_file').load_from_json_file
 
-save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
-load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
+filename = "add_item.json"
+lists = []
 
-list_a = []
-
-for arg in range(1, len(sys.argv)):
-    list_a.append(sys.argv[arg])
-
-save_to_json_file(list_a, "add_item.json")
+try:
+    lists = load(filename)
+except:
+    pass
+for i in range(1, len(sys.argv)):
+    lists.append(sys.argv[i])
+save(lists, filename)
