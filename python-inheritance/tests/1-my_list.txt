@@ -1,0 +1,73 @@
+import
+
+>>> MyList = __import__('1-my_list').MyList
+
+-------------------------------------------
+
+case 1:
+
+>>> a = [1, 9, 4]
+>>> my_list = MyList(a)
+>>> my_list.print_sorted()
+[1, 4, 9]
+
+-------------------------------------------
+
+case 2:
+
+>>> a = []
+>>> my_list = MyList(a)
+>>> my_list.print_sorted()
+[]
+
+-------------------------------------------
+
+case 3:
+
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.print_sorted()
+[1]
+>>> print(my_list)
+[1]
+
+-------------------------------------------
+
+case 4:
+
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> my_list.append(7)
+>>> my_list.append(1)
+>>> my_list.append(-2)
+>>> my_list.append(2)
+>>> my_list.append(-5)
+>>> my_list.print_sorted()
+[-5, -2, 1, 2, 7]
+
+-------------------------------------------
+
+case 5:
+
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list2.print_sorted()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'my_list2' is not defined
+
+-------------------------------------------
+
+case 7:
+
+>>> my_list = MyList()
+>>> my_list.append(5)
+>>> my_list.append(4)
+>>> my_list.append(3)
+>>> my_list.append(2)
+>>> my_list.append(1)
+>>> print(my_list)
+[5, 4, 3, 2, 1]
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(my_list)
+[5, 4, 3, 2, 1]
