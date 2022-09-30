@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-'''returns True if object is inherited'''
+'''comments'''
+
 
 def inherits_from(obj, a_class):
-    '''returns True if object is inherited'''
-
-    if issubclass(type(obj), a_class):
-        return True
+    ''''comments'''
+    if isinstance(obj, a_class):
+        if type(obj) is not a_class:
+            return True
     return False
