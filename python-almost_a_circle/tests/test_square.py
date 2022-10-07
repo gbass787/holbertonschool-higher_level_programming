@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''Unittest for Square'''
+"""unittest square"""
 
 import unittest
 import io
