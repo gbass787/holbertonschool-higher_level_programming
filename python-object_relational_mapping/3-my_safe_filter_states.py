@@ -4,15 +4,7 @@ import sys
 import MySQLdb
 
 if __name__ == "__main__":
-    user = sys.argv[1]
-    passwd = sys.argv[2]
-    database = sys.argv[3]
-    state = sys.argv[4]
-    db = MySQLdb.connect('localhost', user, passwd, database, 3306)
+    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
     c = db.cursor()
-    c.execute("""SELECT * FROM states WHERE name = %(state)s
-                ORDER BY id ASC""", {'state': state})
-    rows = c.fetchall()
-    for row in rows:
-        print(row)
-    db.close()
+    c.execute("SELECT * FROM `states`")
+    [print(state) for state in c.fetchall() if state[1] == sys.argv[4]]

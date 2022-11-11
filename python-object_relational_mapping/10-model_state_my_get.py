@@ -6,20 +6,17 @@ from sqlalchemy import create_engine, text
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
-    user = sys.argv[1]
-    passwd = sys.argv[2]
-    database = sys.argv[3]
-    name = sys.argv[4]
     engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}"
-                           .format(user, passwd, database),
+                           .format(sys.argv[1], sys.argv[2], sys.argv[3]),
                            pool_pre_ping=True)
-    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).filter(text("name='{}'".format(name)))
-    state = states.first()
-    if state is None:
-        print('Not found')
-    else:
-        print(state.id)
+    found = False
+    for state in session.query(State):
+        if state.name == sys.argv[4]:
+            print("{}".format(state.id))
+            found = True
+            break
+    if found is False:
+        print("Not found")
