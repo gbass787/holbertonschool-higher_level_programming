@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-'''Script that takes in arguments and displays all values in the states table of hbtn_0e_0_usa where name matches the argument'''
+'''Script that takes in arguments'''
+'''And displays all values in the states table'''
 import sys
 import MySQLdb
 

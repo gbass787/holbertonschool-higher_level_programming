@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-'''Script that takes in an argument and displays all values in the states table'''
+'''Script that takes in an argument'''
+'''And displays all values in the states table'''
 import sys
 import MySQLdb
 
