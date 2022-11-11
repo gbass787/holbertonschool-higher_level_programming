@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-'''Script that takes in arguments'''
-'''And displays all values in the states table'''
+"""Same as previous task, but safe from MySQL injection"""
+
 import sys
 import MySQLdb
 

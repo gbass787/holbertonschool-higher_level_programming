@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-'''Script that takes in the name of a state as an argument'''
-'''And lists all cities of that state'''
+"""Displays all cities of a given state from the
+    states table of the database hbtn_0e_4_usa."""
+
 import sys
 import MySQLdb
 
